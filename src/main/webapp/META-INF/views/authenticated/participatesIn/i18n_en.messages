@@ -1,0 +1,11 @@
+authenticated.participates-in.form.label.thread-title = Title:
+authenticated.participates-in.form.label.add-participant = Select participant
+authenticated.participates-in.form.label.username = Username:
+authenticated.participates-in.form.label.fullname = Full name:
+
+authenticated.participates-in.form.button.add = Add Participant
+authenticated.participates-in.form.button.delete = Delete participant
+authenticated.participates-in.form.button.return = Return
+
+authenticated.participates-in.list.label.username = Username
+authenticated.participates-in.list.label.fullname = Full name

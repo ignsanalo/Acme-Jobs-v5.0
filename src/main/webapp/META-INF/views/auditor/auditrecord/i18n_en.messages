@@ -1,0 +1,13 @@
+auditor.auditrecord.form.label.title=Title
+auditor.auditrecord.form.label.moment=Moment
+auditor.auditrecord.form.label.body=Body
+auditor.job.form.label.finalMode.yes= Final
+auditor.job.form.label.finalMode.no = Draft
+
+auditor.auditrecord.list.label.title = Title
+auditor.job.form.label.finalMode=FinalMode
+
+auditor.auditrecord.form.button.create=Create
+auditor.auditrecord.form.button.update=Update
+
+auditor.job.form.button.return = return

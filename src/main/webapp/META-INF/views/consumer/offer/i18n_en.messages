@@ -1,0 +1,22 @@
+consumer.offer.list.label.title = Title
+consumer.offer.list.label.deadline = Deadline
+consumer.offer.form.button.return = Back
+
+consumer.offer.form.label.title = Title:
+consumer.offer.form.label.moment = Moment:
+consumer.offer.form.label.deadline = Deadline:
+consumer.offer.form.label.text = Text:
+consumer.offer.form.label.moneyMin = Minimum:
+consumer.offer.form.label.moneyMax = Maximum:
+
+
+consumer.offer.form.label.ticker = Ticker:
+consumer.offer.form.label.accept = Accept Offer
+consumer.offer.form.button.create = Create Offer
+
+
+
+consumer.offer.error.euroZone = Must be match euros|eur|Euros|EUR|EUROS|€.
+consumer.offer.error.must-accept = You must accept the creation.
+consumer.offer.error.moneyMin = Must be lower than the maximum.
+consumer.offer.error.tickerFormat = Must match pattern [O]{1}[A-Z]{4}\\-[0-9]{5}.

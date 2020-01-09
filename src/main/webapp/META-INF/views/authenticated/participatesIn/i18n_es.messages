@@ -1,0 +1,11 @@
+authenticated.participates-in.form.label.thread-title = Título:
+authenticated.participates-in.form.label.add-participant = Seleccionar participante
+authenticated.participates-in.form.label.username = Usuario:
+authenticated.participates-in.form.label.fullname = Nombre completo:
+
+authenticated.participates-in.form.button.add = Añadir participante
+authenticated.participates-in.form.button.delete = Borrar participant
+authenticated.participates-in.form.button.return = Volver
+
+authenticated.participates-in.list.label.username = Usuario
+authenticated.participates-in.list.label.fullname = Nombre completo

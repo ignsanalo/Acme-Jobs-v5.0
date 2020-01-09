@@ -1,0 +1,8 @@
+auditor.auditrecord.form.label.title=Titulo
+auditor.auditrecord.form.label.moment=Momento
+auditor.auditrecord.form.label.body=Cuerpo
+auditor.auditrecord.form.label.status Modo final
+
+auditor.auditrecord.list.label.title = Título
+
+auditor.job.form.button.return = Volver

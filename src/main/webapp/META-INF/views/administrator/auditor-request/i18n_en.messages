@@ -1,0 +1,14 @@
+administrator.auditor-request.form.label.firm= Firm
+administrator.auditor-request.form.label.statement= Statement
+administrator.auditor-request.form.label.status= Status
+administrator.auditor-request.form.label.user= User
+
+administrator.auditor-request.form.button.create = Create
+
+administrator.auditor-request.form.button.return = return
+
+administrator.auditor-request.list.label.user = User
+administrator.auditor-request.list.label.firm = Firm
+administrator.auditor-request.list.label.statement = Statement
+administrator.auditor-request.list.label.status = Status
+

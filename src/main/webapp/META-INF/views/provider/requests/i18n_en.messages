@@ -1,0 +1,28 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+provider.requests.form.label.title = Title:
+provider.requests.form.label.moment = Moment:
+provider.requests.form.label.deadline = Deadline:
+provider.requests.form.label.text = Text:
+provider.requests.form.label.reward = Reward:
+provider.requests.form.label.ticker = Ticker:
+provider.requests.label.accept = Accept request
+provider.requests.form.button.create = Create request 
+provider.requests.form.button.return = Return
+
+provider.requests.error.deadline = Deadline must be earlier than the current date.
+provider.requests.error.euro_zone = Must be match euros|eur|Euros|EUR|EUROS|€.
+provider.requests.error.must-accept = You must accept the creation.
+provider.requests.error.tickerFormat = Must match pattern [O]{1}[A-Z]{4}\\-[0-9]{5}.
+
+
+provider.requests.list.label.title = Title
+

@@ -1,0 +1,17 @@
+consumer.offer.list.label.title = Título
+consumer.offer.list.label.deadline = Fecha límite
+consumer.offer.form.button.return = Volver
+
+consumer.offer.form.label.title = Título:
+consumer.offer.form.label.moment = Momento:
+consumer.offer.form.label.deadline = Fecha límite:
+consumer.offer.form.label.text = Texto:
+consumer.offer.form.label.moneyMin = Mínimo:
+consumer.offer.form.label.moneyMax = Máximo:
+consumer.offer.form.label.accept = Aceptar oferta
+consumer.offer.form.button.create = Crear oferta
+
+consumer.offer.error.euroZone = Debe tener el formato euros|eur|Euros|EUR|EUROS|€.
+consumer.offer.error.must-accept = Debe aceptar la creación.
+consumer.offer.error.moneyMin = Debe ser inferior al máximo.
+consumer.offer.error.tickerFormat = Debe tener el formato [O]{1}[A-Z]{4}\\-[0-9]{5}.

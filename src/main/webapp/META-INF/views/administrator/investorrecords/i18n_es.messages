@@ -1,0 +1,14 @@
+administrator.investorrecords.form.label.name = Nombre:
+administrator.investorrecords.form.label.sector = Sector:
+administrator.investorrecords.form.label.statement = Declaración:
+administrator.investorrecords.form.label.stars = Estrellas:
+
+administrator.investorrecords.form.button.create = Crear
+administrator.investorrecords.form.button.update = Actualizar
+administrator.investorrecords.form.button.delete = Eliminar
+administrator.investorrecords.form.button.return = Volver
+
+
+
+administrator.investorrecords.list.label.name = Nombre
+administrator.investorrecords.list.label.sector = Sector

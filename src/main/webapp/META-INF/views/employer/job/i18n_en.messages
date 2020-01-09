@@ -1,0 +1,37 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+employer.job.list.label.reference = Reference
+employer.job.list.label.deadline = Deadline
+employer.job.list.label.title = Title
+
+employer.job.form.label.reference = Reference:
+employer.job.form.label.title = Title:
+employer.job.form.label.deadline = Deadline:
+employer.job.form.label.salary = Salary:
+employer.job.form.label.moreInfo = More info:
+employer.job.form.label.description = Description:
+employer.job.form.label.errorApli = It is not possible delete jobs with applications.
+employer.job.error.mensajeRechazo = It is not possible to publish the work.
+
+employer.job.form.button.requisito-list = List requisitos
+employer.application.button.list = List applications
+employer.job.form.label.auditRecord= Audit records
+employer.job.form.label.finalMode= final mode
+employer.job.form.button.requisito-create= Create requisito
+employer.job.form.button.duty-list= List duties
+
+employer.job.form.button.create = Create
+employer.job.form.button.update = Update
+employer.job.form.button.delete = Delete
+employer.xxxx1.form.button.create= Create xxxx1
+employer.xxxx1.form.button.show= Create xxxx1
+
+employer.job.form.button.return = Return
