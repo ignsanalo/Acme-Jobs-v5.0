@@ -557,6 +557,7 @@
 				<property name="name" value="Alvaro" />
 				<property name="surname" value="Diaz" />
 				<property name="email" value="adiaz@acme.com" />
+				<property name="phoneNumber" value="+44 (0) 123-456" />
 			</bean>
 		</property>
 		<property name="roles">
@@ -590,6 +591,7 @@
 				<property name="name" value="Manuel" />
 				<property name="surname" value="Rubio" />
 				<property name="email" value="manuel@acme.com" />
+				<property name="phoneNumber" value="+1 123456" />
 			</bean>
 		</property>
 		<property name="roles">

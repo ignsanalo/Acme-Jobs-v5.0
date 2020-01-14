@@ -22,11 +22,11 @@ public class PhoneFormatter implements Formatter<Phone> {
 		String result;
 		String countryCodeText, areaCodeText, numberText;
 
-		countryCodeText = String.format("+%d", object.getCountryCode());
-		areaCodeText = object.getAreaCode() == null ? " " : String.format(" (%d) ", object.getAreaCode());
-		numberText = String.format("%s", object);
+		countryCodeText = String.format("%d", object.getCountryCode());
+		areaCodeText = object.getAreaCode() == null ? " " : String.format(" (%s) ", object.getAreaCode());
+		numberText = String.format("%s", object.getNumber());
 
-		result = String.format("+%d%s%ld", countryCodeText, areaCodeText, numberText);
+		result = String.format("+%s%s%s", countryCodeText, areaCodeText, numberText);
 
 		return result;
 	}
