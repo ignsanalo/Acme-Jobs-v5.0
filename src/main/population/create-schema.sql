@@ -277,15 +277,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `xxxx1` (
-       `id` integer not null,
-        `version` integer not null,
-        `more_info` varchar(255),
-        `text` varchar(255),
-        `job_id` integer not null,
-        primary key (`id`)
-    ) engine=InnoDB;
-
     create table `hibernate_sequence` (
        `next_val` bigint
     ) engine=InnoDB;
@@ -326,9 +317,6 @@ create index IDXmly5kwrpgadjkxv5t5dgw36hr on `requests` (`deadline`);
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
 create index IDXcl5stpa9341w7cquov0wexc9a on `worker` (`qualifications`);
-
-    alter table `xxxx1` 
-       add constraint UK_i2qt665lplguvu6lvrlntdf5q unique (`job_id`);
 
     alter table `administrator` 
        add constraint FK_2a5vcjo3stlfcwadosjfq49l1 
@@ -429,8 +417,3 @@ create index IDXcl5stpa9341w7cquov0wexc9a on `worker` (`qualifications`);
        add constraint FK_l5q1f33vs2drypmbdhpdgwfv3 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
-
-    alter table `xxxx1` 
-       add constraint `FKivqoqgqubr8hn5quyvcmi324` 
-       foreign key (`job_id`) 
-       references `job` (`id`);

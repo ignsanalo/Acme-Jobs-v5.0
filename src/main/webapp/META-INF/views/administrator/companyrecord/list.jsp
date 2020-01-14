@@ -18,4 +18,5 @@
 <acme:list>
 	<acme:list-column code="administrator.companyrecord.list.label.name" path="name" width="20%"/>
 	<acme:list-column code="administrator.companyrecord.list.label.sector" path="sector" width="40%"/>
+	<acme:list-column code="administrator.companyrecord.list.label.stars" path="stars" width="20%"/>
 </acme:list>

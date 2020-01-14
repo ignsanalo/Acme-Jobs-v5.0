@@ -15,3 +15,4 @@ administrator.companyrecord.form.button.return = Volver
 
 administrator.companyrecord.list.label.name= Nombre
 administrator.companyrecord.list.label.sector= Sector
+administrator.companyrecord.list.label.stars = Estrellas

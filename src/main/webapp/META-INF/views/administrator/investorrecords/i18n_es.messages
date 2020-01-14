@@ -12,3 +12,4 @@ administrator.investorrecords.form.button.return = Volver
 
 administrator.investorrecords.list.label.name = Nombre
 administrator.investorrecords.list.label.sector = Sector
+administrator.investorrecords.list.label.stars = Estrellas
