@@ -32,7 +32,7 @@ public class AdministratorInvestorrecordsListService implements AbstractListServ
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "sector", "statement", "stars");
+		request.unbind(entity, model, "name", "sector", "stars");
 
 	}
 

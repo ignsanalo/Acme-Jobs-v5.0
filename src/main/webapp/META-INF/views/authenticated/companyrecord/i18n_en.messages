@@ -11,3 +11,4 @@ authenticated.companyrecord.form.button.return = Return
 
 authenticated.companyrecord.list.label.sector= Sector
 authenticated.companyrecord.list.label.name= Name
+authenticated.companyrecord.list.label.stars = Stars

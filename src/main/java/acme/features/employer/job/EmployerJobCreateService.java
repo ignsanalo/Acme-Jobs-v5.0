@@ -1,6 +1,9 @@
 
 package acme.features.employer.job;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -77,14 +80,34 @@ public class EmployerJobCreateService implements AbstractCreateService<Employer,
 		Configuration config;
 		config = this.repository.findManyConfiguration().stream().findFirst().get();
 
-		if (!errors.hasErrors("title")) {
-			boolean isSpam = config.isSpam(entity.getTitle());
-			errors.state(request, !isSpam, "title", "employer.job.error.spam");
-		}
+		if (entity.isFinalMode() == true) {
 
-		if (!errors.hasErrors("description")) {
-			boolean isSpam = config.isSpam(entity.getDescription());
-			errors.state(request, !isSpam, "description", "employer.job.error.spam");
+			if (!errors.hasErrors("description")) {
+				boolean isSpam = config.isSpam(entity.getDescription());
+				errors.state(request, !isSpam, "description", "authenticated.message.error.spam");
+			}
+
+			if (!errors.hasErrors("title")) {
+				boolean isSpam = config.isSpam(entity.getTitle());
+				errors.state(request, !isSpam, "title", "authenticated.message.error.spam");
+			}
+
+			if (!errors.hasErrors("deadline")) {
+				Boolean deadlineFuture = entity.getDeadline().after(new Date());
+				errors.state(request, deadlineFuture, "deadline", "employer.job.error.deadline-not-future", entity.getDeadline());
+			}
+			if (!errors.hasErrors("deadline")) {
+				Calendar calendar = Calendar.getInstance();
+				calendar.setTime(new Date());
+				calendar.add(Calendar.DAY_OF_YEAR, 7);
+				Boolean deadlineBefore = entity.getDeadline().after(calendar.getTime());
+				errors.state(request, deadlineBefore, "deadline", "employer.job.error.deadline-before-7", entity.getDeadline());
+			}
+			if (!errors.hasErrors("salary")) {
+				Boolean isEur = entity.getSalary().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");
+				errors.state(request, isEur, "salary", "employer.job.error.must-be-eur");
+			}
+
 		}
 
 	}

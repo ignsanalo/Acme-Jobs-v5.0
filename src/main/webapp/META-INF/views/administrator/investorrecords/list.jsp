@@ -18,4 +18,5 @@
 <acme:list>
 	<acme:list-column code="administrator.investorrecords.list.label.name" path="name" width="20%"/>
 	<acme:list-column code="administrator.investorrecords.list.label.sector" path="sector" width="80%"/>
+	<acme:list-column code="administrator.investorrecords.list.label.stars" path="stars" width="20%"/>
 </acme:list>

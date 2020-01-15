@@ -1,14 +1,19 @@
 
 package acme.features.employer.job;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.configuration.Configuration;
 import acme.entities.jobs.Job;
 import acme.entities.roles.Employer;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
@@ -22,7 +27,15 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 	public boolean authorise(final Request<Job> request) {
 		assert request != null;
 
-		return true;
+		boolean result = false;
+		Principal principal = request.getPrincipal();
+
+		int jobId = request.getModel().getInteger("id");
+		Job job = this.repository.findOneJobById(jobId);
+
+		result = !job.isFinalMode() && job.getEmployer().getId() == principal.getActiveRoleId();
+
+		return result;
 	}
 
 	@Override
@@ -63,6 +76,39 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		Configuration config;
+		config = this.repository.findManyConfiguration().stream().findFirst().get();
+
+		if (entity.isFinalMode() == true) {
+
+			if (!errors.hasErrors("description")) {
+				boolean isSpam = config.isSpam(entity.getDescription());
+				errors.state(request, !isSpam, "description", "authenticated.message.error.spam");
+			}
+
+			if (!errors.hasErrors("title")) {
+				boolean isSpam = config.isSpam(entity.getTitle());
+				errors.state(request, !isSpam, "title", "authenticated.message.error.spam");
+			}
+
+			if (!errors.hasErrors("deadline")) {
+				Boolean deadlineFuture = entity.getDeadline().after(new Date());
+				errors.state(request, deadlineFuture, "deadline", "employer.job.error.deadline-not-future", entity.getDeadline());
+			}
+			if (!errors.hasErrors("deadline")) {
+				Calendar calendar = Calendar.getInstance();
+				calendar.setTime(new Date());
+				calendar.add(Calendar.DAY_OF_YEAR, 7);
+				Boolean deadlineBefore = entity.getDeadline().after(calendar.getTime());
+				errors.state(request, deadlineBefore, "deadline", "employer.job.error.deadline-before-7", entity.getDeadline());
+			}
+			if (!errors.hasErrors("salary")) {
+				Boolean isEur = entity.getSalary().getCurrency().matches("EUR|€|EUROS|Euros|euros|eur");
+				errors.state(request, isEur, "salary", "employer.job.error.must-be-eur");
+			}
+
+		}
 
 	}
 
