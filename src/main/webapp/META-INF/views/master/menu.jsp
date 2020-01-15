@@ -111,8 +111,10 @@
 
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update" />
-			<acme:menu-suboption code="master.menu.user-account.become-employer" action="/authenticated/employer/create" />
-			<acme:menu-suboption code="master.menu.user-account.update-employer" action="/authenticated/employer/update" />
+			<acme:menu-suboption code="master.menu.user-account.become-employer" action="/authenticated/employer/create"
+			access="!hasRole('Employer')" />
+			<acme:menu-suboption code="master.menu.user-account.update-employer" action="/authenticated/employer/update" 
+			access="hasRole('Employer')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-worker" action="/authenticated/worker/create" />
 			<acme:menu-suboption code="master.menu.user-account.update-worker" action="/authenticated/worker/update"
 				access="hasRole('Worker')" />
@@ -124,7 +126,8 @@
 				access="!hasRole('Worker')" />
 			<acme:menu-suboption code="master.menu.user-account.worker" action="/authenticated/worker/update"
 				access="hasRole('Worker')" />
-			<acme:menu-suboption code="master.menu.user-account.become-auditor" action="/authenticated/auditor-request/create" />
+			<acme:menu-suboption code="master.menu.user-account.become-auditor" action="/authenticated/auditor-request/create"
+			access="!hasRole('Auditor')" />
 				
 				
 		</acme:menu-option>
