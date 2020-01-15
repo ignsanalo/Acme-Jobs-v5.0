@@ -230,6 +230,13 @@
 				<property name="name" value="Worker" />
 				<property name="surname" value="One" />
 				<property name="email" value="worker1@acme.com" />
+				<property name="phoneNumber">
+				<bean class="acme.datatypes.Phone">
+				<property name="countryCode" value="034"/>
+				<property name="areaCode" value="123"/>
+				<property name="number" value="679200"/>
+				</bean>
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -289,6 +296,7 @@
 				<property name="name" value="Audit" />
 				<property name="surname" value="One2" />
 				<property name="email" value="audit12@acme.com" />
+				<property name="phoneNumber" value="" />
 			</bean>
 		</property>
 		<property name="roles">
@@ -389,6 +397,13 @@
 				<property name="name" value="Employer" />
 				<property name="surname" value="One" />
 				<property name="email" value="employer1@acme.com" />
+				<property name="phoneNumber">
+				 <bean class="acme.datatypes.Phone">
+				  <property name="countryCode" value="034"/>
+				  <property name="areaCode" value="123"/>
+				  <property name="number" value="699301"/>
+				 </bean>
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -418,6 +433,7 @@
 				<property name="name" value="Employer" />
 				<property name="surname" value="Two" />
 				<property name="email" value="employer2@acme.com" />
+				<property name="phoneNumber" value="" />
 			</bean>
 		</property>
 		<property name="roles">
@@ -558,6 +574,13 @@
 				<property name="name" value="Alvaro" />
 				<property name="surname" value="Diaz" />
 				<property name="email" value="adiaz@acme.com" />
+				<property name="phoneNumber">
+				 <bean class="acme.datatypes.Phone">
+				  <property name="countryCode" value="034"/>
+				  <property name="areaCode" value="201"/>
+				  <property name="number" value="6719301"/>
+				 </bean>
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -591,6 +614,7 @@
 				<property name="name" value="Manuel" />
 				<property name="surname" value="Rubio" />
 				<property name="email" value="manuel@acme.com" />
+				<property name="phoneNumber" value="" />
 			</bean>
 		</property>
 		<property name="roles">
