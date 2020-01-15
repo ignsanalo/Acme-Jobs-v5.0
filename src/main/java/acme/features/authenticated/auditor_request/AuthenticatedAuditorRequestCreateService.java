@@ -53,7 +53,7 @@ public class AuthenticatedAuditorRequestCreateService implements AbstractCreateS
 
 		accountId = principal.getAccountId();
 
-		if (this.repository.findAuditorRequestById(accountId) != null) {
+		if (this.repository.findAuditorRequestById(accountId).getStatus() == Status.PENDING) {
 			result = false;
 		} else {
 			result = true;
