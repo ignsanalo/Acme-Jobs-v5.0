@@ -27,6 +27,7 @@ employer.job.form.label.auditRecord= Registros de auditoría
 employer.job.form.label.finalMode= modo final
 employer.job.form.button.requisito-create=Crear requisito
 employer.job.form.button.duty-list= Listar tareas
+employer.job.form.button.duty-create = Crear tarea
 
 employer.job.form.button.create = Crear
 employer.job.form.button.update = Actualizar
