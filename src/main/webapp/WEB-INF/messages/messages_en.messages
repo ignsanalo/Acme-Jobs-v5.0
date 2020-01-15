@@ -18,6 +18,9 @@ default.placeholder.double = 123,456.78
 default.placeholder.integer = 123,456
 default.placeholder.url = http://www.acme.com
 
+default.placeholder.phone = +34 678912346
+
+
 default.error.conversion = Invalid value
 default.error.endpoint-unavailable = End-point not available
 default.error.not-authorised = Access is not authorised
