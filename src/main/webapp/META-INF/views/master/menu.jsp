@@ -86,7 +86,8 @@
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.user-account.offer.list" action="/authenticated/offer/list" />
 			<acme:menu-separator />
-			<acme:menu-suboption code="master.menu.user-account.requests.list" action="/authenticated/requests/list" />
+			<acme:menu-suboption code="master.menu.user
+			-account.requests.list" action="/authenticated/requests/list" />
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.user-account.job.list" action="/authenticated/job/list" />
 			<acme:menu-separator />
@@ -104,9 +105,9 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">
-		<acme:menu-suboption code="master.menu.employer.job.list" action="/employer/job/list-mine" />
-		<acme:menu-separator />
-		<acme:menu-suboption code="master.menu.employer.job.create" action="/employer/job/create" />
+			<acme:menu-suboption code="master.menu.employer.job.list" action="/employer/job/list-mine" />
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.employer.job.create" action="/employer/job/create" />
 
 		</acme:menu-option>
 
@@ -133,11 +134,17 @@
 				access="hasRole('Consumer')" />
 			<acme:menu-suboption code="master.menu.user-account.become-worker" action="/authenticated/worker/create"
 				access="!hasRole('Worker')" />
-			<acme:menu-suboption code="master.menu.user-account.worker" action="/authenticated/worker/update"
-				access="hasRole('Worker')" />
-			<acme:menu-suboption code="master.menu.user-account.become-auditor" action="/authenticated/auditor-request/create" />
-				
-				
+			<acme:menu-suboption code="master.menu.user-account.worker" action="/authenticated/worker/update" access="hasRole('Worker')" />
+			<jstl:if test="${auditorRequest.STATUS != null}">
+				<acme:message code="pending-request"/>
+			</jstl:if>
+
+			<jstl:if test="${auditorRequest.id == null}">
+				<acme:menu-suboption code="master.menu.user-account.become-auditor" action="/authenticated/auditor-request/create"
+					access="!hasRole('Auditor')" />
+			</jstl:if>
+
+
 		</acme:menu-option>
 
 
