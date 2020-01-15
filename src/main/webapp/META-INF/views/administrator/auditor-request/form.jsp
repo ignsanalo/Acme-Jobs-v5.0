@@ -16,8 +16,8 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox code="administrator.auditor-request.form.label.firm" path="firm" readonly="true" />
-	<acme:form-textbox code="administrator.auditor-request.form.label.statement" path="statement" readonly="true" />
+	<acme:form-textarea code="administrator.auditor-request.form.label.firm" path="firm" readonly="true" />
+	<acme:form-textarea code="administrator.auditor-request.form.label.statement" path="statement" readonly="true" />
 	<acme:form-textbox code="administrator.auditor-request.form.label.status" path="status" readonly="true" />
 
 	<acme:form-submit test="${command == 'show'}" code="administrator.auditor-request.form.button.create"
