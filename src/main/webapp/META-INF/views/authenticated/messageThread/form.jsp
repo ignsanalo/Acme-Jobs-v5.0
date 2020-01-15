@@ -30,9 +30,9 @@
 	<acme:form-submit test="${command != 'create'}" code="authenticated.message-thread.form.button.list-participants" method="get" 
 		action="/authenticated/participates-in/list-participants?threadId=${id}"/>
 		
-	<acme:form-submit test="${command != create && isOwner}" code="authenticated.participates-in.form.button.add-participant" method="get"
+	<acme:form-submit test="${command != create && principalId == ownerId}" code="authenticated.participates-in.form.button.add-participant" method="get"
 		action="/authenticated/participates-in/add-participant?threadId=${id}"/>
-		
+	
 	<acme:form-submit test="${command == 'create'}" code="authenticated.messageThread.form.button.create"
 		action="/authenticated/message-thread/create?id=${id}" />
 

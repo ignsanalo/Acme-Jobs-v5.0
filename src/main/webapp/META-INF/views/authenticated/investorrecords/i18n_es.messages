@@ -17,3 +17,4 @@ authenticated.investorrecords.form.button.return = Volver
 
 authenticated.investorrecords.list.label.name = Nombre
 authenticated.investorrecords.list.label.sector = Sector
+authenticated.investorrecords.list.label.stars = Estrellas

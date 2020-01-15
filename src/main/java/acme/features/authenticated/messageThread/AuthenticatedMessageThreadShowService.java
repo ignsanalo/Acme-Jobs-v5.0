@@ -51,9 +51,11 @@ public class AuthenticatedMessageThreadShowService implements AbstractShowServic
 		Collection<ParticipatesIn> participants = this.repository.findManyParticipatesInByThreadId(threadId);
 
 		Authenticated owner = messageThread.getOwner();
+		int principalId = principal.getActiveRoleId();
+		int ownerId = owner.getId();
 
-		isOwner = principal.getActiveRoleId() == owner.getId();
-		isParticipant = participants.stream().anyMatch(p -> p.getParticipant().getId() == principal.getActiveRoleId());
+		isOwner = principalId == ownerId;
+		isParticipant = participants.stream().anyMatch(p -> p.getParticipant().getId() == principalId);
 
 		return isParticipant || isOwner;
 	}

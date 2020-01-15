@@ -34,7 +34,7 @@ public class AdministratorCompanyrecordListService implements AbstractListServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "sector");
+		request.unbind(entity, model, "name", "sector", "stars");
 	}
 
 	@Override
