@@ -30,7 +30,10 @@ public interface AuthenticatedMessageThreadRepository extends AbstractRepository
 	MessageThread findOneById(int id);
 
 	@Query("select m from MessageThread m where m.owner.id = ?1")
-	Collection<MessageThread> findManyByAuthId(int id);
+	Collection<MessageThread> findManyByOwnerId(int id);
+
+	@Query("select pi.thread from ParticipatesIn pi where pi.participant.id = ?1")
+	Collection<MessageThread> findManyByAuthenticatedId(int authenticatedId);
 
 	@Query("select a from Authenticated a where a.id = ?1")
 	Authenticated findOneAuthenticatedById(int id);
@@ -40,7 +43,7 @@ public interface AuthenticatedMessageThreadRepository extends AbstractRepository
 
 	@Query("select c from Configuration c")
 	Collection<Configuration> findManyConfiguration();
-  
+
 	@Query("select pi from ParticipatesIn pi where pi.thread.id = ?1")
 	Collection<ParticipatesIn> findManyParticipatesInByThreadId(int id);
 

@@ -46,7 +46,7 @@ public class AuthenticatedMessageThreadListMineService implements AbstractListSe
 		Principal principal;
 
 		principal = request.getPrincipal();
-		result = this.repository.findManyByAuthId(principal.getActiveRoleId());
+		result = this.repository.findManyByOwnerId(principal.getActiveRoleId());
 
 		return result;
 
