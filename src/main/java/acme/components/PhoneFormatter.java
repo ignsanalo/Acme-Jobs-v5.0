@@ -23,7 +23,7 @@ public class PhoneFormatter implements Formatter<Phone> {
 		String countryCodeText, areaCodeText, numberText;
 
 		countryCodeText = String.format("%d", object.getCountryCode());
-		areaCodeText = object.getAreaCode() == null ? " " : String.format(" (%s) ", object.getAreaCode());
+		areaCodeText = object.getAreaCode() == null ? " " : String.format("(%s)", object.getAreaCode());
 		numberText = String.format("%s", object.getNumber());
 
 		result = String.format("+%s%s%s", countryCodeText, areaCodeText, numberText);
@@ -49,7 +49,7 @@ public class PhoneFormatter implements Formatter<Phone> {
 		areaCodeRegex = "\\d{1,6}";
 		numberRegex = "\\d{1,9}([\\s-]\\d{1,9}){0,5}";
 		phoneRegex = String.format( // 
-			"^\\s*(?<CC>%1$s)(\\s+\\((?<AC>%2$s)\\)\\s+|\\s+)(¿<N>%3$s)\\s*$", //
+			"^\\s*(?<CC>%1$s)(\\s+\\((?<AC>%2$s)\\)\\s+|\\s+)(?<N>%3$s)\\s*$", //
 			countryCodeRegex, //
 			areaCodeRegex, //
 			numberRegex //
